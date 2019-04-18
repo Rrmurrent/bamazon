@@ -1,0 +1,16 @@
+select * from  tvshow order by network
+    ---order by will auto default into ascending order---
+
+    How to insert a row into a certain table (in this example it would be tv show)
+        insert into (tableName)
+        ex: insert into tvDB.tvshow(title, genre, network) VALUES ("friends", "comedy", "NBC");
+
+    How to do an "inner join" combining the two tables together
+        ex: table tv shows and table characters
+
+        inner join is all the stuff in the middle. 
+        Right join would show all of the charaters and some of the overlapping tv shows that have those characters. 
+
+        ex: select*from tvcharacter inner join tvshow on tvcharacter.showid = tvshow.showid
+            hint: you can create "alias'" 
+                ex: from tvcharacter c inner join tb show s on c.show =  s.showid
